@@ -1,6 +1,5 @@
 ﻿namespace Jgs.ValueObjects;
 
-public class Class1
+public abstract class ValueObject
 {
-
 }
