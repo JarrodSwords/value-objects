@@ -5,6 +5,7 @@ public class WhenCheckingEquality : Spec.WhenCheckingEquality
     #region Implementation
 
     public override ValueObject Create() => new Foo(1, "Bat");
+    public override ValueObject CreateOther() => new Foo(2, "Bat");
 
     #endregion
 
