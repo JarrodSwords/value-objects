@@ -25,5 +25,17 @@ public abstract class WhenCheckingEquality
         (o2 == o1).Should().BeTrue();
     }
 
+    [Fact]
+    public void WithSameStructure_ThenObjectsAreEqual()
+    {
+        var o1 = Create();
+        var o2 = Create();
+
+        using var scope = new AssertionScope();
+
+        o2.Should().Be(o1);
+        (o2 == o1).Should().BeTrue();
+    }
+
     #endregion
 }
