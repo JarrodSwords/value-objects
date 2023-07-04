@@ -1,4 +1,4 @@
-﻿namespace Jgs.ValueObjects.Spec.Foo;
+﻿namespace Jgs.ValueObjects.Spec.FooValueObject;
 
 public class WhenCheckingEquality : Spec.WhenCheckingEquality
 {
