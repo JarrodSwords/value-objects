@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jgs.ValueObjects", "value-objects\Jgs.ValueObjects.csproj", "{D6FDC3CB-3E3B-4883-9E89-57606326FE54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jgs.ValueObjects.Spec", "value-objects-spec\Jgs.ValueObjects.Spec.csproj", "{403C45B3-AF77-4352-8366-A05508E25D09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6FDC3CB-3E3B-4883-9E89-57606326FE54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FDC3CB-3E3B-4883-9E89-57606326FE54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FDC3CB-3E3B-4883-9E89-57606326FE54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FDC3CB-3E3B-4883-9E89-57606326FE54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403C45B3-AF77-4352-8366-A05508E25D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403C45B3-AF77-4352-8366-A05508E25D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403C45B3-AF77-4352-8366-A05508E25D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403C45B3-AF77-4352-8366-A05508E25D09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
