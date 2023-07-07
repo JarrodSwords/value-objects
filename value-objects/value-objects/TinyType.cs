@@ -25,4 +25,10 @@ public abstract class TinyType<T> : ValueObject where T : notnull
     }
 
     #endregion
+
+    #region Static Interface
+
+    public static implicit operator T(TinyType<T> source) => source.Value;
+
+    #endregion
 }
