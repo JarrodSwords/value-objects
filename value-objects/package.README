@@ -1,0 +1,3 @@
+﻿dotnet pack --configuration Release
+
+dotnet nuget push ./bin/Release/Jgs.ValueObjects.0.1.0.nupkg  -k YOUR_GITHUB_PAT -s "github"
