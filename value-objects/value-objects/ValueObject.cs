@@ -2,6 +2,9 @@
 
 public abstract class ValueObject : IEquatable<ValueObject>
 {
+    public static bool operator ==(ValueObject? left, ValueObject? right) => Equals(left, right);
+    public static bool operator !=(ValueObject? left, ValueObject? right) => !Equals(left, right);
+
     #region Equality
 
     public bool Equals(ValueObject? other)
@@ -42,14 +45,6 @@ public abstract class ValueObject : IEquatable<ValueObject>
                 }
             }
         );
-
-    #endregion
-
-    #region Static Interface
-
-    public static bool operator ==(ValueObject? left, ValueObject? right) => Equals(left, right);
-
-    public static bool operator !=(ValueObject? left, ValueObject? right) => !Equals(left, right);
 
     #endregion
 }

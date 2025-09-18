@@ -16,7 +16,7 @@ public class WhenCheckingEquality
             .Where(t => typeof(IValueObjectFactory).IsAssignableFrom(t) && !t.IsInterface);
 
         foreach (var factory in factories)
-            yield return new[] { Activator.CreateInstance(factory)! };
+            yield return [Activator.CreateInstance(factory)!];
     }
 
     #endregion

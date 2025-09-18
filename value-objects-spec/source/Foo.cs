@@ -1,13 +1,8 @@
-﻿namespace Jgs.ValueObjects.Spec.FooTinyType;
+﻿namespace Jgs.ValueObjects.Spec;
 
-public class Foo : ValueObject
+public class Foo(int bar) : ValueObject
 {
-    public Foo(int bar)
-    {
-        Bar = bar;
-    }
-
-    public int Bar { get; }
+    public int Bar { get; } = bar;
 
     #region Equality
 
