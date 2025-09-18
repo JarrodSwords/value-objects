@@ -1,31 +1,24 @@
-﻿namespace Jgs.ValueObjects;
+﻿using System.Diagnostics;
 
-public abstract class TinyType<T> : ValueObject where T : notnull
+namespace Jgs.ValueObjects;
+
+[DebuggerDisplay("{_value}")]
+public abstract class TinyType<T>(T value) : ValueObject where T : notnull
 {
-    protected TinyType(T value)
-    {
-        Value = value;
-    }
+    private T _value = value;
 
-    public T Value { get; }
-
-    public static implicit operator T(TinyType<T> source) => source.Value;
+    public static implicit operator T(TinyType<T> source) => source._value;
 
     #region Equality
 
-    public override bool Equals(object? obj)
-    {
-        if (obj is null)
-            return false;
-
-        return obj.GetType() == typeof(T)
-            ? Value.Equals(obj)
+    public override bool Equals(object? obj) =>
+        obj?.GetType() == typeof(T)
+            ? _value.Equals(obj)
             : base.Equals(obj);
-    }
 
     public override IEnumerable<object> GetEqualityComponents()
     {
-        yield return Value;
+        yield return _value;
     }
 
     #endregion
