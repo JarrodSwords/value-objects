@@ -2,23 +2,23 @@
 
 namespace Jgs.ValueObjects;
 
-[DebuggerDisplay("{_value}")]
+[DebuggerDisplay("{Value}")]
 public abstract class TinyType<T>(T value) : ValueObject where T : notnull
 {
-    private T _value = value;
+    protected T Value = value;
 
-    public static implicit operator T(TinyType<T> source) => source._value;
+    public static implicit operator T(TinyType<T> source) => source.Value;
 
     #region Equality
 
     public override bool Equals(object? obj) =>
         obj?.GetType() == typeof(T)
-            ? _value.Equals(obj)
+            ? Value.Equals(obj)
             : base.Equals(obj);
 
     public override IEnumerable<object> GetEqualityComponents()
     {
-        yield return _value;
+        yield return Value;
     }
 
     #endregion
